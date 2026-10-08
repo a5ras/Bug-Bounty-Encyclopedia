@@ -1,4 +1,4 @@
-# 02: robots.txt 
+# 02: robots.txt
 
 As I said, we will use the website **PortSwigger** to practice on these vulnerabilities. This lab is a classic example of Information Disclosure.
 

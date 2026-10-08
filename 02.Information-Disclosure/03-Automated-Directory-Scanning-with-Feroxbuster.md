@@ -1,4 +1,4 @@
-# 03: Automated Discovery with Feroxbuster 
+# 03: Automated Discovery with Feroxbuster
 
 This document outlines the walkthrough for a PortSwigger lab focused on finding sensitive information using automated discovery tools like Feroxbuster.
 
@@ -36,7 +36,7 @@ We will use the `common.txt` wordlist from the **SecLists** repository, which is
 
 Run the command with your lab's URL and the path to your `common.txt` file.
 
-### Step 3: Analyze the Results 
+### Step 3: Analyze the Results
 
 Feroxbuster will display the directories and files it finds, along with their HTTP status codes.
 
@@ -50,7 +50,7 @@ For example, you might discover a file like `phpinfo.php`. This file contains de
 > * **Purpose:** It's used to sign session cookies, password reset tokens, and other security-sensitive data.
 > * **Risk:** If an attacker gets this key, they can forge their own cookies and "sign" them, allowing them to impersonate any user, including administrators. It should *never* be exposed publicly. Finding it in a debug file like `phpinfo.php` is a critical vulnerability.
 
-### Step 4: Solving the Lab 
+### Step 4: Solving the Lab
 
 1.  Run Feroxbuster against the lab URL.
 2.  Analyze the `200 OK` results.

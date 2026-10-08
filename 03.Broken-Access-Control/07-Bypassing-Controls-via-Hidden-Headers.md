@@ -37,7 +37,7 @@ I send this request:
 TRACE / HTTP/1.1
 Host: your-lab-url.com
 Cookie: session=...
-````
+```
 
 The server will respond with the *full* request, including any headers that were added by intermediate proxies:
 
@@ -53,10 +53,10 @@ X-Custom-IP-Authorization: 1360.36.06.35  <-- A NEW, HIDDEN HEADER!
 
 ## Step 4: Exploitation
 
-When I do this in the lab, a file downloads. When I open it in a text editor, I see the same thing: at the bottom, there is a new header I didn't send\!
+When I do this in the lab, a file downloads. When I open it in a text editor, I see the same thing: at the bottom, there is a new header I didn't send!
 ***X-Custom-IP-Authorization: 1360.36.06.35***
 
-This must be the check\! The server is checking for a specific IP.
+This must be the check! The server is checking for a specific IP.
 
 1.  This IP looks fake. I can use social engineering to find the real IP, but in this case, I'm guessing the admin must access it from the server itself. The IP for that is the **localhost IP**: *127.0.0.1*.
 2.  I'll go back to my original *GET /admin* request in **Burp Repeater**.
@@ -64,7 +64,7 @@ This must be the check\! The server is checking for a specific IP.
     *X-Custom-IP-Authorization: 127.0.0.1*
 4.  I'll click **"Send"**.
 
-As you see, the admin panel appears\!
+As you see, the admin panel appears!
 
 ## Step 5: Persistent Access (Solving the Lab)
 

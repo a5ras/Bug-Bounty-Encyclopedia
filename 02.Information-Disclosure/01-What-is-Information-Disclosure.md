@@ -1,4 +1,3 @@
-
 # 01: What is Information Disclosure?
 
 Information Disclosure, also known as "Information Leakage," is a vulnerability that occurs when a web application accidentally reveals sensitive data to its users.
